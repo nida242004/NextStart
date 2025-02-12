@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## note
+export default function Home() {
+  console.log("Hello from Home"); //server side component
+  //by adding 'useclient' i can make this client side
+  // which means it will be visible on browser
+  //server side is rendered only on server side
+  //client component is pre rendered on server side, static shelf is created and sent to client
+  //client side component that do not require interactivity is also rendeed on server side
+  //client side adds the interactivity related components later in the static shelf
+  return (
+    <h1>Welcome to Next.js</h1>
+  );
+}
