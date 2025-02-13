@@ -3,6 +3,7 @@
 /**
  * This configuration is used to for the Sanity Studio that’s mounted on the `\app\studio\[[...tool]]\page.tsx` route
  */
+import 'easymde/dist/easymde.min.css';
 
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
