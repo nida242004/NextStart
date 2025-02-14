@@ -6,6 +6,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import React from 'react';
 import markdownit from 'markdown-it';
+import { Suspense } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
+import View from '@/components/View';
 
 export const experimental_ppt = true;
 
@@ -59,10 +62,13 @@ const page = async ({ params } : { params: Promise<{ id: string }>}) => {
         )}
       </div>
 
-        <hr className='divider'/>
-
+      <hr className='divider'/>
+      <Suspense fallback={<Skeleton className='view_skeleton'/>}>
+        <View id={id} />
+      </Suspense>
+        
     </section>
-
+  
   </>
   );
 };
