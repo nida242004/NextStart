@@ -15,6 +15,7 @@ import {schema} from './sanity/schemaTypes'
 import {structure} from './sanity/structure'
 import {markdownSchema} from 'sanity-plugin-markdown'
 
+
 export default defineConfig({
   basePath: '/studio',
   projectId,
