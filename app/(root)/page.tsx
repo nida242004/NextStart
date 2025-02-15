@@ -48,7 +48,7 @@ export default async function Home({
               />
             ))
           ) : (
-            <p className="no-results">No startups found</p>
+            <p className="no-results text-2xl">No startups found</p>
           )}
         </ul>
       </section>
